@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 
@@ -22,6 +23,8 @@ public class card {
     private int cid;
     @CreationTimestamp
     private Date issuedate;
+    @UpdateTimestamp
+    private Date updateOn;
     @Enumerated(EnumType.STRING)
     private Status status;
     private String validtill;

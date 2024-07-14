@@ -20,6 +20,7 @@ public class author {
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int aid;
+   @Column(unique = true)
    private String email;
 
    @OneToMany(mappedBy = "ath",cascade = CascadeType.ALL)
